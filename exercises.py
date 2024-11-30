@@ -74,6 +74,7 @@ class Game() :
             self.winner = self.board['a3']
 
     def check_for_tie(self):
+        # the all() is from python doc ( https://docs.python.org/3/library/functions.html ) , I had to make some research to done this game 
         if all(value is not None for value in self.board.values()) and not self.winner:
             self.tie = True
 
